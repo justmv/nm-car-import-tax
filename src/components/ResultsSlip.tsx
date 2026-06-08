@@ -70,7 +70,8 @@ export function ResultsSlip({ r, form }: { r: CalcResult; form: FormState }) {
         {r.dmvExemption === 'none' ? (
           <>
             <Line name="Motor-vehicle tax (ДМВ)" group amount={r.dmvEur} fx={fx} />
-            <Line name="Value component" meta={`${r.valuePct}% of ВМВ ${eur(r.vmvEur)}`} sub
+            <Line name="Value component (luxury scale)"
+              meta={`progressive ${r.valuePct}% of ВМВ ${eur(r.vmvEur)} · 0%→20%`} sub
               amount={r.dmvValueComponentEur} fx={fx} />
             <Line name="CO₂ component"
               meta={`${r.effectiveCo2} g/km × ${r.co2Coefficient} ден (${form.co2Standard})`} sub

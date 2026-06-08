@@ -20,9 +20,6 @@ export interface FormState {
   registration: string;
   broker: string;
   other: string;
-  // estimator helper inputs
-  displacement: string;
-  powerKw: string;
 }
 
 export const CURRENT_YEAR = 2026;
@@ -44,8 +41,6 @@ export const defaultForm: FormState = {
   registration: '120',
   broker: '150',
   other: '0',
-  displacement: '1.5',
-  powerKw: '110',
 };
 
 export function dutyRateOf(form: FormState): number {

@@ -1,5 +1,3 @@
-import { estimateCo2FromSpecs } from '../lib/estimateCo2';
-import { num } from '../lib/format';
 import {
   CURRENT_YEAR,
   dutyRateOf,
@@ -38,15 +36,6 @@ export function VehiclePanel({ form, update }: { form: FormState; update: Update
   function onCountry(country: string) {
     // Suggest a duty preset for the chosen origin, but never lock the user in.
     update({ country, dutyPresetId: suggestedDutyPresetId(country) });
-  }
-
-  function runEstimate() {
-    const co2 = estimateCo2FromSpecs({
-      fuel: form.fuel,
-      displacementL: num(form.displacement),
-      powerKw: num(form.powerKw) || undefined,
-    });
-    update({ co2: String(co2), co2Unknown: false });
   }
 
   return (
@@ -118,7 +107,7 @@ export function VehiclePanel({ form, update }: { form: FormState; update: Update
           {!isElectric && (
             <Field label="CO₂ emissions (combined)" htmlFor="co2" wide
               hint={form.co2Unknown
-                ? <span className="hint--warn">Unknown → customs will assume a punitive <b>400 g/km</b>. Use the estimator or your COC instead.</span>
+                ? <span className="hint--warn">Unknown → customs assumes a punitive <b>400 g/km</b>. Provide the COC figure to lower this.</span>
                 : <>Take this from the vehicle's Certificate of Conformity (COC). The threshold bands differ by test method.</>}>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
                 <div style={{ flex: '1 1 130px', minWidth: 0 }}>
@@ -134,25 +123,11 @@ export function VehiclePanel({ form, update }: { form: FormState; update: Update
                   ))}
                 </div>
               </div>
-            </Field>
-          )}
-
-          {!isElectric && (
-            <Field label="Don't know the CO₂?" wide optional="optional estimator">
-              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-                <label className="check" style={{ alignItems: 'center' }}>
-                  <input type="checkbox" checked={form.co2Unknown}
-                    onChange={(e) => update({ co2Unknown: e.target.checked })} />
-                  <span className="ctxt">Use the legal 400 g/km assumption</span>
-                </label>
-                <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <UnitInput value={form.displacement} unit="L"
-                    onChange={(v) => update({ displacement: v })} placeholder="1.5" />
-                  <UnitInput value={form.powerKw} unit="kW"
-                    onChange={(v) => update({ powerKw: v })} placeholder="kW" />
-                  <button type="button" className="linkbtn" onClick={runEstimate}>estimate CO₂ →</button>
-                </div>
-              </div>
+              <label className="check" style={{ marginTop: 10, alignItems: 'center' }}>
+                <input type="checkbox" checked={form.co2Unknown}
+                  onChange={(e) => update({ co2Unknown: e.target.checked })} />
+                <span className="ctxt">I don't know it — use the legal 400 g/km assumption</span>
+              </label>
             </Field>
           )}
 

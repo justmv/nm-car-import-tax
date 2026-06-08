@@ -95,7 +95,6 @@ src/
     taxData.ts     # all rates & brackets (single source of truth, cited)
     calc.ts        # the cascade engine (pure functions)
     calc.test.ts   # hand-verified worked examples
-    estimateCo2.ts # optional CO₂ estimator — tunable heuristic
     formState.ts   # form ↔ calc-input mapping
     format.ts      # EUR / MKD / % formatters
   components/       # VehiclePanel, TransportPanel, ResultsSlip, ui

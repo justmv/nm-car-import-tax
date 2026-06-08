@@ -43,9 +43,10 @@ export default function App() {
         <div className="disc">
           <b>Indicative only.</b> This tool implements the public North Macedonian rules
           (Law on Motor Vehicle Tax 261/19; calculation regulation 277/19 as amended by
-          220/2023; VAT 18%; customs duty 5%, or 1% for EU origin with EUR.1). The legally
-          binding amount is determined by the Customs Administration at the time of clearance.
-          Rates verified June 2026.
+          220/2023; VAT 18%; customs duty 5%, or 1% for EU origin with EUR.1). There is no
+          separate luxury tax — that role is played by the progressive ДМВ value component
+          (0% under €10k, rising to 20% above €50k). The legally binding amount is determined
+          by the Customs Administration at the time of clearance. Rates verified June 2026.
         </div>
         <div className="srcs">
           <span>Sources:</span>
