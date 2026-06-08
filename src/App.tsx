@@ -15,17 +15,17 @@ export default function App() {
     <div className="shell">
       <header className="masthead rise">
         <div>
-          <div className="kicker">Северна Македонија · Vehicle import</div>
-          <h1>Car import tax <em>calculator</em></h1>
+          <div className="kicker">Северна Македонија · Увоз на возило</div>
+          <h1>Калкулатор за <em>увозен данок</em></h1>
           <p className="sub">
-            Estimate the customs duty, motor-vehicle tax (ДМВ) and 18% VAT on a car
-            imported into North Macedonia — with transport costs kept cleanly separate.
+            Пресметајте ја царината, данокот на моторни возила (ДМВ) и 18% ДДВ при
+            увоз на автомобил во Северна Македонија — со јасно одвоени трошоци за транспорт.
           </p>
         </div>
         <div className="seal">
-          VAT <b>18%</b><br />
-          Duty <b>1% / 5%</b><br />
-          ДМВ <b>value + CO₂</b>
+          ДДВ <b>18%</b><br />
+          Царина <b>1% / 5%</b><br />
+          ДМВ <b>вредност + CO₂</b>
         </div>
       </header>
 
@@ -41,18 +41,18 @@ export default function App() {
 
       <footer className="foot">
         <div className="disc">
-          <b>Indicative only.</b> This tool implements the public North Macedonian rules
-          (Law on Motor Vehicle Tax 261/19; calculation regulation 277/19 as amended by
-          220/2023; VAT 18%; customs duty 5%, or 1% for EU origin with EUR.1). There is no
-          separate luxury tax — that role is played by the progressive ДМВ value component
-          (0% under €10k, rising to 20% above €50k). The legally binding amount is determined
-          by the Customs Administration at the time of clearance. Rates verified June 2026.
+          <b>Само информативно.</b> Алатката ги применува јавните прописи на Северна
+          Македонија (Закон за данок на моторни возила 261/19; уредба за пресметка 277/19
+          изменета со 220/2023; ДДВ 18%; царина 5%, или 1% за потекло од ЕУ со EUR.1).
+          Нема посебен данок на луксуз — таа улога ја презема прогресивната вредносна
+          компонента на ДМВ (0% до €10.000, до 20% над €50.000). Обврзувачкиот износ го
+          утврдува Царинската управа при царинење. Стапки проверени во јуни 2026.
         </div>
         <div className="srcs">
-          <span>Sources:</span>
-          <a href="https://customs.gov.mk/index.php/mk/biznis-zaednica-mk/patnicki-avtomobili" target="_blank" rel="noreferrer">Customs · passenger cars</a>
-          <a href="https://customs.gov.mk/index.php/mk/e-carina/kalkulator-dmv" target="_blank" rel="noreferrer">Official ДМВ calculator</a>
-          <a href="https://customs.gov.mk/images/uredbadmv_copy.pdf" target="_blank" rel="noreferrer">Regulation 277/19</a>
+          <span>Извори:</span>
+          <a href="https://customs.gov.mk/index.php/mk/biznis-zaednica-mk/patnicki-avtomobili" target="_blank" rel="noreferrer">Царина · патнички автомобили</a>
+          <a href="https://customs.gov.mk/index.php/mk/e-carina/kalkulator-dmv" target="_blank" rel="noreferrer">Официјален ДМВ калкулатор</a>
+          <a href="https://customs.gov.mk/images/uredbadmv_copy.pdf" target="_blank" rel="noreferrer">Уредба 277/19</a>
         </div>
       </footer>
     </div>

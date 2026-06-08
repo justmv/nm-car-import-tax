@@ -25,7 +25,7 @@ export interface FormState {
 export const CURRENT_YEAR = 2026;
 
 export const defaultForm: FormState = {
-  country: 'Germany',
+  country: 'Германија',
   vehiclePrice: '14000',
   fuel: 'petrol',
   co2: '128',

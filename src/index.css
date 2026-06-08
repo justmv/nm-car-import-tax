@@ -24,8 +24,8 @@
   --brass-tint: #f1e8cf;
 
   /* type */
-  --font-display: 'Fraunces', 'Hoefler Text', Georgia, serif;
-  --font-body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', 'Hoefler Text', Georgia, serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
 
   /* misc */

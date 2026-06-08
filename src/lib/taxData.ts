@@ -58,27 +58,27 @@ export interface DutyPreset {
 export const DUTY_PRESETS: DutyPreset[] = [
   {
     id: 'eu_eur1',
-    label: 'EU origin + EUR.1 / invoice declaration',
+    label: 'Потекло од ЕУ + EUR.1 / изјава на фактура',
     rate: 0.01,
-    note: 'Cars originating in the EU with a EUR.1 certificate or an invoice declaration of origin pay a reduced 1% duty (official Customs Administration).',
+    note: 'Возила со потекло од ЕУ што имаат сертификат EUR.1 или изјава за потекло на фактурата плаќаат намалена царина од 1% (Царинска управа).',
   },
   {
     id: 'mfn',
-    label: 'No preferential origin (standard rate)',
+    label: 'Без преференцијално потекло (стандардна стапка)',
     rate: 0.05,
-    note: 'The standard duty on passenger cars is 5% of the customs value when no preference applies (e.g. EU car without EUR.1, or most non-EU origins).',
+    note: 'Стандардната царина на патнички возила е 5% од царинската вредност кога не важи преференција (пр. возило од ЕУ без EUR.1 или повеќето неевропски потекла).',
   },
   {
     id: 'cefta',
-    label: 'CEFTA / EFTA / Türkiye / Ukraine (qualifying origin)',
+    label: 'ЦЕФТА / ЕФТА / Турција / Украина (квалификувано потекло)',
     rate: 0.0,
-    note: 'Industrial goods that genuinely originate in these partners can be duty-free with proof of origin — but most used cars do not qualify as "originating". Confirm with your broker.',
+    note: 'Индустриски производи што навистина потекнуваат од овие партнери може да бидат ослободени од царина со доказ за потекло — но повеќето половни возила не се сметаат за „со потекло“. Потврдете кај вашиот шпедитер.',
   },
   {
     id: 'custom',
-    label: 'Custom rate',
+    label: 'Сопствена стапка',
     rate: 0.05,
-    note: 'Enter the exact duty rate confirmed by your customs broker.',
+    note: 'Внесете ја точната царинска стапка потврдена од вашиот царински посредник.',
   },
 ];
 
@@ -156,21 +156,21 @@ export const CO2_BRACKETS: Co2Bracket[] = [
 // Not exhaustive; the user can always override the rate.
 // ---------------------------------------------------------------------------
 export const EU_COUNTRIES = [
-  'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czechia', 'Denmark',
-  'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland',
-  'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands',
-  'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden',
+  'Австрија', 'Белгија', 'Бугарија', 'Хрватска', 'Кипар', 'Чешка', 'Данска',
+  'Естонија', 'Финска', 'Франција', 'Германија', 'Грција', 'Унгарија', 'Ирска',
+  'Италија', 'Латвија', 'Литванија', 'Луксембург', 'Малта', 'Холандија',
+  'Полска', 'Португалија', 'Романија', 'Словачка', 'Словенија', 'Шпанија', 'Шведска',
 ] as const;
 
 export const CEFTA_EFTA_COUNTRIES = [
-  'Albania', 'Bosnia and Herzegovina', 'Kosovo', 'Moldova', 'Montenegro',
-  'Serbia', 'Iceland', 'Liechtenstein', 'Norway', 'Switzerland', 'Türkiye',
-  'Ukraine',
+  'Албанија', 'Босна и Херцеговина', 'Косово', 'Молдавија', 'Црна Гора',
+  'Србија', 'Исланд', 'Лихтенштајн', 'Норвешка', 'Швајцарија', 'Турција',
+  'Украина',
 ] as const;
 
 export const OTHER_COUNTRIES = [
-  'United Kingdom', 'United States', 'Japan', 'South Korea', 'China',
-  'United Arab Emirates', 'Other',
+  'Велика Британија', 'САД', 'Јапонија', 'Јужна Кореја', 'Кина',
+  'Обединети Арапски Емирати', 'Друго',
 ] as const;
 
 export function suggestedDutyPresetId(country: string): string {
